@@ -1,0 +1,6 @@
+[submodule "multibuild"]
+	path = multibuild
+	url = https://github.com/matthew-brett/multibuild.git
+[submodule "pybox2d"]
+	path = pybox2d
+	url = https://github.com/pybox2d/pybox2d
