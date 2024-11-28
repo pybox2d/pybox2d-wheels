@@ -1,2 +1,2 @@
 [build-system]
-requires = ["setuptools", "swig"]
+requires = ["setuptools<72.2.0", "swig"]
