@@ -9,6 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13, macos-latest]
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v4
@@ -31,9 +32,8 @@ jobs:
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
         working-directory: pybox2d
-        # to supply options, put them in 'env', like:
-        # env:
-        #   CIBW_SOME_OPTION: value
+        env:
+          CIBW_SKIP: cp37-win32
 
       - uses: actions/upload-artifact@v4
         with:
