@@ -24,6 +24,7 @@ jobs:
       - uses: actions/setup-python@v5
 
       - name: Install build requirements
+        shell: bash -e {0}
         run: |
           cp patches/pyproject.toml pybox2d
           cp patches/setup-2.3.10.py pybox2d/setup.py
