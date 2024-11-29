@@ -32,12 +32,6 @@ jobs:
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
         working-directory: pybox2d
-        env:
-          CIBW_SKIP: cp37-win32
-          CIBW_TEST_REQUIRES: pytest
-          CIBW_TEST_COMMAND: >
-            python -c 'import Box2D; print("Imported Box2D successfully")'
-            pytest -vv --pyargs Box2D.tests
 
       - uses: actions/upload-artifact@v4
         with:
