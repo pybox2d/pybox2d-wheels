@@ -4,6 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.cibuildwheel]
 test-requires = "pytest"
-test-command = "python -c 'import Box2D; print(Box2D)' && pytest -vv --pyargs Box2D.tests"
+test-command = "pytest -vv --pyargs Box2D.tests"
 # TODO
 skip = "cp37-win32"
