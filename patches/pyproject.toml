@@ -1,5 +1,6 @@
 [build-system]
 requires = ["setuptools<72.2.0", "swig"]
+build-backend = "setuptools.build_meta"
 
 [tool.cibuildwheel]
 test-requires = "pytest"
